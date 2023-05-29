@@ -1,39 +1,218 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
-.navegacao li{
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
-.navegacao li a{
+.paises-paragrafo, .fase-paragrafo, .atuacao-texto{
+    margin-left: 10px;
+    text-indent: 15px;
+}
+.paises, .fase{
+    margin-left: 5px;
+}
+.navegacao li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navegacao li a {
     text-decoration: none;
     color: rgb(255, 77, 77);
-    text-shadow: 5px 5px 5px rgb(0, 0, 0);
-}
-.navegacao li a:hover{
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
+}
+
+.navegacao li a:hover {
     color: rgb(255, 255, 255);
 }
 
-header{
-    width: 100%;
-    /*background-color: rgb(255, 42, 42);*/
-    background-image: url('imgs/operacao-condor.jpg');
-    background-size: 100% 100%;
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 15px;
+.navegacao-desdobramentos {
+    margin-top: -15px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
 }
-.titulo-principal{
+
+.navegacao-desdobramentos li {
+    margin-bottom: 5px;
+}
+
+.navegacao-desdobramentos li a {
+    text-decoration: none;
+    color: rgb(255, 77, 77);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.navegacao-desdobramentos li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.cabecario {
+    color: rgb(255, 77, 77);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+header {
+    width: 100%;
+    background-image: url('imgs/operacao-condor.jpg');
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.titulo-principal {
     color: white;
     font-size: 50px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
 }
-.subtitulo{
+
+.subtitulo {
+    color: black;
+    background-color: aliceblue;
+    font-size: 44px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     margin-bottom: 15px;
-    font-size: 35px;
 }
-.paises{
-    margin-bottom: 5px;
+
+.cabecario p {
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navegacao li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: rgb(255, 77, 77);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.navegacao a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.fase.f1,
+.fase.f2,
+.fase.f3,
+.paises {
+    font-size: 20px;
+}
+/*Primeira organização da imagem*/
+.texto-1{
+    display: flex;
+    align-items: center;
+}
+.ditadura-2{
+    margin-left: 10px;
+    margin-right: 15px;
+    border: 1px solid black;
+}
+.atuacao-texto{
+    text-align: justify;
+}
+/*Segunda organização da imagem*/
+.texto-2{
+    display: flex;
+    align-items: center;
+}
+.ditadura-brasil{
+    margin-left: 15px;
+    margin-right: 10px;
+    border: 1px solid black;
+}
+.brasil-paragrafo{
+    text-align: justify;
+}
+
+
+/* Estilos para dispositivos de tela pequena */
+
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para telas pequenas */
+    .titulo-principal {
+        font-size: 24px;
+    }
+    .subtitulo {
+        font-size: 18px;
+    }
+    .cabecario p {
+        font-size: 14px;
+    }
+    .navegacao li {
+        display: block;
+    }
+    .fase-paragrafo,
+    .paises-paragrafo {
+        font-size: 12px;
+    }
+}
+
+/* Estilos para dispositivos de tela média */
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos específicos para telas médias */
+    .titulo-principal {
+        font-size: 36px;
+    }
+    .subtitulo {
+        font-size: 29px;
+    }
+    .cabecario p {
+        font-size: 16px;
+    }
+    .navegacao li {
+        display: inline-block;
+    }
+    .fase-paragrafo,
+    .paises-paragrafo {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para dispositivos de tela grande */
+
+@media only screen and (min-width: 1025px) {
+    /* Estilos específicos para telas grandes */
+    .titulo-principal {
+        font-size: 48px;
+    }
+    .subtitulo {
+        font-size: 40px;
+    }
+    .cabecario p {
+        font-size: 18px;
+    }
+    .navegacao li {
+        display: inline-block;
+    }
 }
